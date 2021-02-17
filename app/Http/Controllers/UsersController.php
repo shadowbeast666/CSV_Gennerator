@@ -11,7 +11,10 @@ class UsersController extends Controller
     {
         User::find($user);
 
-        return view('/home');
+        return view('home',[
+            'user' => $user,
+        ]
+    );
 
 
     }
