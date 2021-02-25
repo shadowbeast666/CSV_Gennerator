@@ -16,29 +16,34 @@ use App\Http\Controllers\ProfilesController;
 |
 */
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
 
-Route::get('/csvgenerator', function () {
-    return view('csvgenerator');
-});
-/*
+
+
 Route::group(['middleware' => 'auth'], function () {
-    Route::get('/', function () {
-            return view('welcome');
+   
+
+    Route::get('/profile/{user}', 'App\Http\Controllers\ProfilesController@index')->name('profile.show');
+
+    Route::get('/csvgenerator', function () {
+        return view('csvgenerator');
     });
+
+    Route::post('/csvgenerator', 'App\Http\Controllers\csvcontroller@main')->name('csvcontroller.main');
+
 });
-*/
+
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-Route::post('/csvgenerator', 'App\Http\Controllers\csvcontroller@main')->name('csvcontroller.main');
 
 
-Route::get('/profile/{user}', 'App\Http\Controllers\ProfilesController@index')->name('profile.show');
+
+
 
 
 
