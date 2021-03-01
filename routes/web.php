@@ -24,20 +24,21 @@ Route::get('/', function () {
 Route::group(['middleware' => 'auth'], function () {
    
 
-    Route::get('/profile/{user}', 'App\Http\Controllers\ProfilesController@index')->name('profile.show');
+  
 
     Route::get('/csvgenerator', function () {
         return view('csvgenerator');
     });
 
     Route::post('/csvgenerator', 'App\Http\Controllers\csvcontroller@main')->name('csvcontroller.main');
-
+    Route::get('/profile', 'App\Http\Controllers\Profilecontroller@index')->name('profile');
+    
 });
 
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/workflow', [App\Http\Controllers\WorkflowController::class, 'index'])->name('workflow');
 
 
 

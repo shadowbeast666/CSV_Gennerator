@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class csvcontroller extends Controller
+class Csvcontroller extends Controller
 {
     public function main(Request $request){
 
