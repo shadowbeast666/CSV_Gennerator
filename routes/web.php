@@ -21,6 +21,7 @@ Route::get('/', function () {
 
 
 
+
 Route::group(['middleware' => 'auth'], function () {
    
 
@@ -46,11 +47,11 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('/reports', function () {
-        return view('reports');
+        return view('getback');
     });
 
     Route::get('/integrations', function () {
-        return view('integrations');
+        return view('getback');
     });
 
 

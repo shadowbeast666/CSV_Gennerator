@@ -8,16 +8,12 @@ use app\Models\User;
 
 class UsersController extends Controller
 {
-    /*
-    public function index($user)
+    public function index()
     {
-       $user = User::find($user);
+        $data = User::all();
 
-        return view('home',[
-            'user' => $user,
-        ]
-    );
-    */
+        return view('shop', compact('data'));
+    }
 
     }
 }
