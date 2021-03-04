@@ -10,10 +10,29 @@ class UsersController extends Controller
 {
     public function index()
     {
-        $data = User::all();
+        $all_data_users = User::all();
 
-        return view('shop', compact('data'));
+        return view('users', compact('all_data_users'));
     }
 
-    }
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }

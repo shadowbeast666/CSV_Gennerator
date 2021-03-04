@@ -82,13 +82,16 @@
                 </tr>
               </thead>
               <tbody>
+              @foreach($all_data_users as $user)
                 <tr>
-                  <td>1,001</td>
-                  <td>Lorem</td>
-                  <td>ipsum</td>
-                  <td>dolor</td>
-                  <td>sit</td>
+                  <td>{{$user->id}}</td>
+                  <td>{{$user->number}}</td>
+                  <td>{{$user->adress}}</td>
+                  <td>{{$user->installation_date}}</td>
+                  <td>{{$user->ship_date}}</td>
+                  <td>{{$user->isready}}</td>
                 </tr>
+                @endforeach
               </tbody>
             </table>
           </div>
