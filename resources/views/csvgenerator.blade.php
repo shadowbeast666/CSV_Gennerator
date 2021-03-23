@@ -11,6 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
         <!-- Scripts -->
         <script src="{{ asset('js/app.js') }}" defer></script>
+        <script src="{{ asset('js/csv.js') }}" defer></script>
 
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -39,6 +40,7 @@
         </style>
     </head>
     <body>    
+    <!--
     <div id="xd">
         <form method="post" action="{{ route('csvcontroller.main') }}">
             @csrf
@@ -266,8 +268,190 @@
                     </div>
                 </div>
         </div>
+        <div class="form row g-3 text-center pr-1 pl-1">
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="number7"/>
+                    <label class="form-label"  for="form10Example2">Shop Number</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3 ">
+                    <div class="form-outline">
+                    <input type="text" id="" class="form-control" name="country6"/>
+                    <label class="form-label"  for="form10Example1">Country</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="mac7"/>
+                    <label class="form-label"  for="form10Example2">MAC</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="ip7"/>
+                    <label class="form-label"  for="form10Example3">Adres IP</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="poscount7"/>
+                    <label class="form-label"  for="form10Example3">POS count</label>
+                    </div>
+                </div>
+        </div>
+        <div class="form row g-3 text-center pr-1 pl-1">
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="number8"/>
+                    <label class="form-label"  for="form10Example2">Shop Number</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3 ">
+                    <div class="form-outline">
+                    <input type="text" id="" class="form-control" name="country7"/>
+                    <label class="form-label"  for="form10Example1">Country</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="mac8"/>
+                    <label class="form-label"  for="form10Example2">MAC</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="ip8"/>
+                    <label class="form-label"  for="form10Example3">Adres IP</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="poscount8"/>
+                    <label class="form-label"  for="form10Example3">POS count</label>
+                    </div>
+                </div>
+        </div>
+        <div class="form row g-3 text-center pr-1 pl-1">
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="number9"/>
+                    <label class="form-label"  for="form10Example2">Shop Number</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3 ">
+                    <div class="form-outline">
+                    <input type="text" id="" class="form-control" name="country9"/>
+                    <label class="form-label"  for="form10Example1">Country</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="mac9"/>
+                    <label class="form-label"  for="form10Example2">MAC</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="ip9"/>
+                    <label class="form-label"  for="form10Example3">Adres IP</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="poscount9"/>
+                    <label class="form-label"  for="form10Example3">POS count</label>
+                    </div>
+                </div>
+        </div>
+        <div class="form row g-3 text-center pr-1 pl-1">
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="number10"/>
+                    <label class="form-label"  for="form10Example2">Shop Number</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3 ">
+                    <div class="form-outline">
+                    <input type="text" id="" class="form-control" name="country10"/>
+                    <label class="form-label"  for="form10Example1">Country</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example2" class="form-control" name="mac10"/>
+                    <label class="form-label"  for="form10Example2">MAC</label>
+                    </div>
+                </div>
+                <div class="col-sm pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="ip10"/>
+                    <label class="form-label"  for="form10Example3">Adres IP</label>
+                    </div>
+                </div>
+                <div class="col-auto pt-3">
+                    <div class="form-outline">
+                    <input type="text" id="form10Example3" class="form-control" name="poscount10"/>
+                    <label class="form-label"  for="form10Example3">POS count</label>
+                    </div>
+                </div>
+        </div>
                 <button type="submit" class="qwe btn btn-danger relative-bottom">Generuj CSV</button>
                 </form>
     </div>
+    -->
+    <div class="container">
+    <div class="row clearfix">
+    	<div class="col-md-12 table-responsive">
+            <form method="post" action="{{ route('csvcontroller.main') }}">
+                @csrf
+                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                        <tr >
+                            <th class="text-center">
+                                Name
+                            </th>
+                            <th class="text-center">
+                                Email
+                            </th>
+                            <th class="text-center">
+                                Notes
+                            </th>
+                            <th class="text-center">
+                                Option
+                            </th>
+                            <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr id='addr0' data-id="0" class="hidden">
+                            <td data-name="number">
+                                <input type="text" name='number0'  placeholder='Shop Number' class="form-control"/>
+                            </td>
+                            <td data-name="country">
+                                <input type="text" name='country0' placeholder='Country' class="form-control"/>
+                            </td>
+                            <td data-name="mac">
+                                <input type="text" name='mac0'  placeholder='MAC' class="form-control"/>
+                            </td>
+                            <td data-name="ip">
+                                <input type="text" name='ip0'  placeholder='IP' class="form-control"/>
+                            </td>
+                            <td data-name="count">
+                                <input type="text" name='poscount0'  placeholder='POS Count' class="form-control"/>
+                            </td>
+                            <td data-name="del">
+                                <button name="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'><span aria-hidden="true">×</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="qwe btn btn-danger relative-bottom">Generuj CSV</button>
+            </form>
+		</div>
+	</div>
+	<a id="add_row" class="btn btn-primary float-right">Add Row</a>
+</div>
     </body>
 </html>
