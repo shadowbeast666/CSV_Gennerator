@@ -409,18 +409,22 @@
                     <thead>
                         <tr >
                             <th class="text-center">
-                                Name
+                                Numer skelpu
                             </th>
                             <th class="text-center">
-                                Email
+                                Skrót kraju
                             </th>
                             <th class="text-center">
-                                Notes
+                                MAC adres
                             </th>
                             <th class="text-center">
-                                Option
+                                Adres IP
+                            </th>
+                            <th class="text-center">
+                                Liczba kas
                             </th>
                             <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                            <a id="add_row" class="btn btn-primary float-right">Add Row</a>
                             </th>
                         </tr>
                     </thead>
@@ -438,20 +442,21 @@
                             <td data-name="ip">
                                 <input type="text" name='ip0'  placeholder='IP' class="form-control"/>
                             </td>
-                            <td data-name="count">
+                            <td data-name="poscount">
                                 <input type="text" name='poscount0'  placeholder='POS Count' class="form-control"/>
                             </td>
+                                
+                            </form>
                             <td data-name="del">
                                 <button name="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'><span aria-hidden="true">×</span></button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
-                <button type="submit" class="qwe btn btn-danger relative-bottom">Generuj CSV</button>
-            </form>
+                <button type="submit" class="btn btn-danger float-right relative-bottom">Generuj CSV</button>
 		</div>
 	</div>
-	<a id="add_row" class="btn btn-primary float-right">Add Row</a>
+	
 </div>
     </body>
 </html>
