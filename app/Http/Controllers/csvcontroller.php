@@ -8,7 +8,8 @@ use App\Http\Controllers\Controller;
 class Csvcontroller extends Controller
 {
     public function main(Request $request)
-    {
+    {   
+        
         $row_counter = 0;
         define("first_row","TargetIp,ConfigFile,ConfigPara,ConfigPara,ConfigPara,MACAddress,changDeviceInfo,DeviceName,DeviceGroup,CLIScript,changSnmpPara,SnmpParaVersion,SnmpParaSecurityUser,SnmpParaSecuMode,SnmpParaAuthScheme,SnmpParaAuthPassword,SnmpParaPrivScheme,SnmpParaPrivPassword,PingDevType,changeSsh,SshParaPort,SshParaUserName,SshParaPassword,SshParaRetries,SshParaTimeOut,LoginType");
         define("iphelp","77");
@@ -20,14 +21,43 @@ class Csvcontroller extends Controller
         function Checkifexist()
         {
             $row_count = 0;
-            if(!isset($_POST["number0"]) && isset($_POST["country0"]) && isset($_POST["mac0"]) && isset($_POST["ip0"]) && isset($_POST["poscount0"]))
+            if(empty($_POST["number0"]) && empty($_POST["country0"]) && empty($_POST["mac0"]) && empty($_POST["ip0"]) && empty($_POST["poscount0"]))
+            {
+                $f = fopen('php://memory', 'w'); 
+                header('Content-Type: application/csv');
+                
+                setcookie('debil1',$row_count,time() + (86400 * 30));
+                if(isset($_COOKIE['debil1']) && !isset($_COOKIE['debil2']))
                 {
-                    $f = fopen('php://memory', 'w'); 
-                    header('Content-Type: application/csv');
-                    header('Content-Disposition: attachment; filename="Nie generuj pustych plików debilu.jd"');
-                    fpassthru($f);
-                    exit();
+                    header('Content-Disposition: attachment; filename="Może byś tak nie ściągał pustych plików co.ZobaczKotkuComamwSrodku"');
+                    setcookie('debil2',$row_count,time() + (86400 * 30));
+                    unset($_COOKIE['debil1']);
+                    
                 }
+                else if(isset($_COOKIE['debil2']) && !isset($_COOKIE['debil3']))
+                {
+                    header('Content-Disposition: attachment; filename="Widzę że nie dociera... .LepiejNiePatrzCoMamWsrodku"');
+                    setcookie('debil3',$row_count,time() + (86400 * 30));
+                    unset($_COOKIE['debil2']);
+                }
+                else if(isset($_COOKIE['debil3']) && !isset($_COOKIE['debil4']))
+                {
+                    header('Content-Disposition: attachment; filename="Ty to chyba lubisz.... .WsumieJakChcesz"');
+                    setcookie('debil4',$row_count,time() + (86400 * 30));
+                    unset($_COOKIE['debil3']);
+                }
+                else if(isset($_COOKIE['debil4']))
+                {
+                    header('Content-Disposition: attachment; filename="Ściągaj do woli! .ptsd"');
+                    unset($_COOKIE['debil4']);
+                }
+                else
+                {
+                    header('Content-Disposition: attachment; filename="Brawo ściągnąłeś pusty plik .jd"');
+                }
+                fpassthru($f);  
+                exit();
+            }
             
             for($i = 0; $i < 30;)
             {
@@ -46,15 +76,12 @@ class Csvcontroller extends Controller
 
             for ($i = 0; $i < $row_count;) 
             {
-                if(strlen($_POST["number$i"]) != 0)
+                if(!empty($_POST["number$i"]) && !empty($_POST["country$i"]) && !empty($_POST["mac$i"]) && !empty($_POST["ip$i"]) && !empty($_POST["poscount$i"]))
                 {
                     $row_counter++;
                     
                 }
-                else
-                {
-                    return 0;
-                }
+                
 
                 $shop[$i] = $_POST["number$i"];
                 $country[$i] = $_POST["country$i"];
