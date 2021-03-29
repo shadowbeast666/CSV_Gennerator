@@ -85,11 +85,10 @@
               @foreach($all_data_users as $user)
                 <tr>
                   <td>{{$user->id}}</td>
-                  <td>{{$user->number}}</td>
-                  <td>{{$user->adress}}</td>
-                  <td>{{$user->installation_date}}</td>
-                  <td>{{$user->ship_date}}</td>
-                  <td>{{$user->isready}}</td>
+                  <td>{{$user->name}}</td>
+                  <td>{{$user->email}}</td>
+                  <td>{{$user->password}}</td>
+                  <td>{{$user->active}}</td>
                 </tr>
                 @endforeach
               </tbody>

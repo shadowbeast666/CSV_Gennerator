@@ -41,10 +41,8 @@ Route::group(['middleware' => 'auth'], function () {
     });
 
     Route::get('/shop', 'App\Http\Controllers\ShopController@index')->name('shop');
+    Route::get('/users', 'App\Http\Controllers\UsersController@index')->name('users');
 
-    Route::get('/users', function () {
-        return view('users');
-    });
 
     Route::get('/reports', function () {
         return view('getback');
