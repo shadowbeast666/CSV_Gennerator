@@ -16,27 +16,10 @@
         <!-- Styles -->
         <link href="{{ asset('css/app.css') }}" rel="stylesheet">
         <link rel="shortcut icon" href="{{ asset('aruba.png') }}" type="image/x-icon"/>
-        
-
         <style>
             body{
                 background-color:#429bf5
-            }
-            #xd{
-                position:fixed;
-                top: 15%;
-                left: 15%;
-                width:75%;
-                height:75%;
-                border: 1px solid #ccc;
-                background-color: #f3f3f3;
-            }
-            .qwe{
-                position:absolute;
-                bottom:0;
-                right:0;
-            }
-
+            };
         </style>
     </head>
     <body>    
