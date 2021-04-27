@@ -102,6 +102,10 @@ class Csvcontroller extends Controller
                 {
                     $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i].".cfg,hostname:";
                 }
+                else if($country[$i] = "SK")
+                {
+                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash_fiscalprinter.cfg,hostname:";
+                }
                 else 
                 {
                     $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash.cfg,hostname:";
@@ -154,3 +158,4 @@ class Csvcontroller extends Controller
     }
     
 }
+
