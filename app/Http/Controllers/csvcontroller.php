@@ -100,7 +100,7 @@ class Csvcontroller extends Controller
 
                 if($country[$i] == "ES")
                 {
-                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i].".cfg,hostname:";
+                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i]."_".$pos[$i].".cfg,hostname:";
                 }
                 else if($country[$i] = "SK")
                 {
