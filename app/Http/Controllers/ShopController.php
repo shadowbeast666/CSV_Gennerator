@@ -7,24 +7,10 @@ use Illuminate\Http\Request;
 
 class ShopController extends Controller
 {
-    /*
-        public function scopeShopNumberFilter($query, $filters)
+    public function index()
     {
-        return $query->whereHas('number', function ($query) use ($filters) {
-                $query->where('type', $filters['type']);
-        });
-    }
-    public function scopeNicknameFilter($query, $nickname)
-    {
-        return $query->whereHas('user_nick_name', function ($query) use ($searchTerm) {
-            $query->where('custom_title', 'like', '%'.$nickname.'%');
-        });
-    }
-        public function index()
-        {
-            $data = Shop::all();
+        $data = Shop::all();
 
-            return view('shop', compact('data'));
-        }
-        */
+        return view('shop', compact('data'));
+    }
 }

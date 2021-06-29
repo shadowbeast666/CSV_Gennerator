@@ -26,7 +26,6 @@
     <div class="container">
     <div class="row clearfix">
     	<div class="col-md-12 table-responsive">
-        <form method="post" action="{{ route('csvcontroller.main') }}">
                 <table class="table table-bordered table-hover table-sortable" id="tab_logic">
                     <thead>
                         <tr>
@@ -51,7 +50,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        
+                        <form method="post" action="{{ route('csvcontroller.main') }}">
                         @csrf
                         <tr id='addr0' data-id="0" class="hidden">
                             <td data-name="number">

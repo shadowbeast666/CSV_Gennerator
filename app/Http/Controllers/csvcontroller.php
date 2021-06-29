@@ -130,6 +130,7 @@ class Csvcontroller extends Controller
                 
                 $i++;
             }
+
             $f = fopen('php://memory', 'w'); 
             echo first_row.PHP_EOL;
 
@@ -140,8 +141,6 @@ class Csvcontroller extends Controller
                     
                     $i++;
                 }
-                
-                
 
             $current_date = date("M-d");
 
@@ -149,7 +148,6 @@ class Csvcontroller extends Controller
             header('Content-Disposition: attachment; filename="Vernity_'.$current_date.'_deploy.csv"');
             fpassthru($f);  
         }
-        
         
         
         $row_count = Checkifexist();
