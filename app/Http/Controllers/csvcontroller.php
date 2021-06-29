@@ -50,7 +50,22 @@ class csvcontroller extends Controller
 
             $defalut_gw[$i] = defaluthelp.$ip[$i].iphelp;
 
+<<<<<<< Updated upstream
             $iphelp = $ip[$i].iphelp;
+=======
+                if($country[$i] == "ES")
+                {
+                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i]."_".$pos[$i].".cfg,hostname:";
+                }
+                else if($country[$i] == "SK")
+                {
+                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash_fiscalprinter.cfg,hostname:";
+                }
+                else 
+                {
+                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash.cfg,hostname:";
+                }
+>>>>>>> Stashed changes
 
             $vlan_output[$i] = vlanhelp.$ipgateway[$i].",";
 

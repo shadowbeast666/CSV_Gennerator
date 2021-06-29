@@ -41,6 +41,7 @@
     <body>    
     <div id="xd">
         <form method="post" action="{{ route('csvcontroller.main') }}">
+<<<<<<< Updated upstream
             @csrf
             <div class="form row g-3 text-center pr-1 pl-1">
                 <div class="col-sm pt-3">
@@ -267,6 +268,59 @@
                 </div>
         </div>
                 <button type="submit" class="qwe btn btn-danger relative-bottom">Generuj CSV</button>
+=======
+                <table class="table table-bordered table-hover table-sortable" id="tab_logic">
+                    <thead>
+                        <tr>
+                            <th class="text-center">
+                                Numer skelpu
+                            </th>
+                            <th class="text-center">
+                                Skrót kraju
+                            </th>
+                            <th class="text-center">
+                                MAC adres
+                            </th>
+                            <th class="text-center">
+                                Adres IP
+                            </th>
+                            <th class="text-center">
+                                Liczba kas <br>
+                                (Hiszpania (Liczba posów)_(Liczba SCO) )
+                            </th>
+                            <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
+                            <a id="add_row" class="btn btn-primary float-right">Add Row</a>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                        @csrf
+                        <tr id='addr0' data-id="0" class="hidden">
+                            <td data-name="number">
+                                <input type="text" name='number0'  placeholder='Shop Number' class="form-control"/>
+                            </td>
+                            <td data-name="country">
+                                <input type="text" name='country0' placeholder='Country' class="form-control"/>
+                            </td>
+                            <td data-name="mac">
+                                <input type="text" name='mac0'  placeholder='MAC' class="form-control"/>
+                            </td>
+                            <td data-name="ip">
+                                <input type="text" name='ip0'  placeholder='IP' class="form-control"/>
+                            </td>
+                            <td data-name="poscount">
+                                <input type="text" name='poscount0'  placeholder='POS Count' class="form-control"/>
+                            </td> 
+                            
+                            <td data-name="del">
+                            <button type="button" name="del0" class='btn btn-danger glyphicon glyphicon-remove row-remove'><span aria-hidden="true">×</span></button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <button type="submit" class="btn btn-danger float-right relative-bottom">Generuj CSV</button>
+>>>>>>> Stashed changes
                 </form>
     </div>
     </body>
