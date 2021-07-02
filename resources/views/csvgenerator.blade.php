@@ -44,6 +44,8 @@
                             </th>
                             <th class="text-center">
                                 Liczba kas
+                                <br>
+                                W przypadku Hiszpanii <br> liczba posów_liczba SCO (np.2_6)
                             </th>
                             <th class="text-center" style="border-top: 1px solid #ffffff; border-right: 1px solid #ffffff;">
                             <a id="add_row" class="btn btn-primary float-right">Add Row</a>

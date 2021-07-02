@@ -9,6 +9,7 @@ class Csvcontroller extends Controller
 {
     public function main(Request $request)
     {   
+        ob_start();
         
         $row_counter = 0;
         define("first_row","TargetIp,ConfigFile,ConfigPara,ConfigPara,ConfigPara,MACAddress,changDeviceInfo,DeviceName,DeviceGroup,CLIScript,changSnmpPara,SnmpParaVersion,SnmpParaSecurityUser,SnmpParaSecuMode,SnmpParaAuthScheme,SnmpParaAuthPassword,SnmpParaPrivScheme,SnmpParaPrivPassword,PingDevType,changeSsh,SshParaPort,SshParaUserName,SshParaPassword,SshParaRetries,SshParaTimeOut,LoginType");
@@ -100,9 +101,9 @@ class Csvcontroller extends Controller
 
                 if($country[$i] == "ES")
                 {
-                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i].".cfg,hostname:";
+                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i]."_".$pos[$i].".cfg,hostname:";
                 }
-                else if($country[$i] = "SK")
+                else if($country[$i] == "SK")
                 {
                     $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash_fiscalprinter.cfg,hostname:";
                 }
@@ -155,6 +156,7 @@ class Csvcontroller extends Controller
         $row_count = Checkifexist();
         Make_csv($row_counter, $row_count);    
         
+        ob_end_flush();
     }
     
 }
