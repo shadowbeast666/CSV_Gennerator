@@ -23,7 +23,7 @@ Laravel is accessible, powerful, and provides tools required for large, robust a
 
 ## About ProjectX
 
-It is a simple Laravel based web application created for single purpose. To learn... 
+It is a simple Laravel based web application created as a tool facilitating the creation of configuration files for network devices in accordance with the accepted standards. Also for learning the Laravel framework
 
 
 
