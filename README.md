@@ -21,7 +21,7 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## About ProjectX
+## About CSV Generator
 
 It is a simple Laravel based web application created as a tool facilitating the creation of configuration files for network devices in accordance with the accepted standards. Also for learning the Laravel framework
 
