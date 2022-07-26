@@ -15,12 +15,7 @@ class csvcontroller extends Controller
         $ip = [];
         $pos = [];
         $max = 0;
-        define("first_row","TargetIp,ConfigFile,ConfigPara,ConfigPara,ConfigPara,MACAddress,changDeviceInfo,DeviceName,DeviceGroup,CLIScript,changSnmpPara,SnmpParaVersion,SnmpParaSecurityUser,SnmpParaSecuMode,SnmpParaAuthScheme,SnmpParaAuthPassword,SnmpParaPrivScheme,SnmpParaPrivPassword,PingDevType,changeSsh,SshParaPort,SshParaUserName,SshParaPassword,SshParaRetries,SshParaTimeOut,LoginType");
-        define("iphelp","77");
-        define("ipgate","78");
-        define("defaluthelp",",DEFAULT_GW_VLAN90:");
-        define("vlanhelp", ",IP_VLAN90:");
-        define("lasthelp","\snmpv3.cfg,1,3,pepco,3,2,be\$tHippo73,2,be\$tHippo73,1,1,22,pepco,be\$tHippo73,3,20,2");
+        
         $row_counter = 0;
         for ($i = 0; $i <= 6;) {
             $shop[$i] = $_POST["number$i"];
@@ -53,18 +48,6 @@ class csvcontroller extends Controller
 <<<<<<< Updated upstream
             $iphelp = $ip[$i].iphelp;
 =======
-                if($country[$i] == "ES")
-                {
-                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_DUALPOS_".$country[$i]."_".$pos[$i].".cfg,hostname:";
-                }
-                else if($country[$i] == "SK")
-                {
-                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash_fiscalprinter.cfg,hostname:";
-                }
-                else 
-                {
-                    $pos_output[$i] = ",Shops_".$country[$i]."\shop_".$pos[$i]."_cash.cfg,hostname:";
-                }
 >>>>>>> Stashed changes
 
             $vlan_output[$i] = vlanhelp.$ipgateway[$i].",";
