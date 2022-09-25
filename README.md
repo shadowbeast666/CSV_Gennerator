@@ -7,6 +7,20 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+## About CSV Generator
+
+It is Laravel based web application created as a tool facilitating the creation of configuration files for network devices in accordance with the accepted standards. 
+
+## Features
+
+- Registration and Login System 
+- Input validation
+- Adminstartion Panel
+- Cross platform
+- Network configuration files generation
+
+
+
 ## About Laravel
 
 Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
@@ -20,11 +34,6 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 - [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
-
-## About CSV Generator
-
-It is a simple Laravel based web application created as a tool facilitating the creation of configuration files for network devices in accordance with the accepted standards. Also for learning the Laravel framework
-
 
 
 
